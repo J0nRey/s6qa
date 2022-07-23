@@ -1,0 +1,116 @@
+//menu hamburgesa
+
+.hamb-button{
+    width: 50px;
+    height: 50px;
+    display: block; //pasar de elemento de linea a bloque
+    border: 1px solid #333;
+    border-radius: 5px;
+    &:hover{
+        cursor: pointer;}
+    //pseudo elemento
+    &:before{
+        content: "";
+        width: 60%;
+        height: 2px;
+        display: block;
+        background-color: #333;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 14px;
+        //sombra
+        box-shadow: 0px 10px 0 0 #333, 0px 20px 0 0 #333;
+    }
+    
+}
+
+
+
+//seleccionando un imput de tipo checkbox 
+//y este esté marcado que no se vea
+    /*input[type="checkbox"]:checked{
+        display: none;
+    }*/
+
+//selecionando la ul que este inmediatamente 
+//despues de un input tipo checkbox marcado
+//que la ul no se vea
+    /*input[type="checkbox"]:checked + ul{
+        display: none;
+    }*/
+
+//seleccionando un input de tipo checkbox
+//que no se vea
+//y al hacer checked que la ul no se vea
+input[type="checkbox"]{
+    display: none;
+    &:checked + ul{
+        display: none;
+    } 
+}
+
+
+//acomodar una imagen
+
+//caso 1
+
+.card-wrapper{
+    width: 90%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid red;
+    .card{
+        border: 1px solid #acacac;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+//      .img-wrapper{width: 100%;}
+        .img-wrapper{
+            width: 100%; //tamaño del elemento padre, card
+            padding-top: 100%; //tamaño del elemento padre, card
+            border: 1px solid purple;
+            background-size: cover; // 100%;
+//          background-repeat: no-repeat;
+            background-image: url("https://picsum.photos/id/45/600/400");
+            background-position: center; //centramos la imagen
+        }
+        .card-body{
+            padding: 1rem;   
+        }
+    }
+
+}
+
+//caso 2
+
+.card-wrapper2{
+    width: 90%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid red;
+    justify-content: space-evenly;
+    .card2{
+        border: 1px solid #acacac;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        .img-wrapper2{
+            width: 100%;
+            padding-top: 100%; 
+            background-size: cover;
+//          background-image: url("https://picsum.photos/id/45/600/400");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .card-body2{
+            padding: 1rem;   
+        }
+    }
+
+}
+
+// src="https://picsum.photos/id/237/600/400" alt=""
